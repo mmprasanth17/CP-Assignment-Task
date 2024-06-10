@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="d1"></h1>
+    <h3 id="d2"></h3>
+    <h2 id="d3"> good morning</h2>  
+    <script>
+        //1.document.write
+
+        document.write("hello prasanth <br>");
+        document.write(100+400)
+
+        //2.window.alert
+
+        window.alert("How are you")
+        window.alert(1000-800)
+
+        //3.console.log
+        console.log("Display output")
+        console.log(5*5)
+        //4.Dom
+        // here we set value or data
+        document.getElementById("d1").innerHTML="My name is prasanrh";
+        document.getElementById("d2").innerHTML="I live in chennai";
+        //here we set style
+        document.getElementById("d1").style.color="red";
+        document.getElementById("d2").style.backgroundColor="pink"
+        //here we get data data by using DOM
+        let data=document.getElementById("d3").innerHTML;
+        console.log(data)
+
+
+    </script>
+</body>
+</html>

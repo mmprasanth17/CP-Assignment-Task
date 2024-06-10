@@ -1,0 +1,105 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="../Assests/Images/My-Gold-Guide-600x410.jpg" alt="gold" height="300px" width="300px" id="img1"><br>
+    <strong id="imgName">gold</strong><br>
+    <button type="button" onclick="changeimgage()">changeimage</button>
+    <script>
+        function changeimage(){
+            document.getElementById("img1").src="../Assests/Images/Rivaah-Bride.jpg";
+            document.getElementById("imgName").innerHTML="lady"
+        }
+    </script>
+</body>
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="../Assests/Images/My-Gold-Guide-600x410.jpg" alt="gold" height="300px" width="300px" id="img1"><br>
+    <strong id="imgName">gold</strong><br>
+    <button type="button" onclick="changeImage()">change image</button>
+    <script>
+        function changeImage(){
+            document.getElementById("img1").src="../Assests/Images/Rivaah-Bride.jpg";
+            document.getElementById("imgName").innerHTML="lady";
+        }
+    </script>
+</body>
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="../Assests/Images/My-Gold-Guide-600x410.jpg" alt="gold" height="300px" width="300px" id="img1"><br>
+    <strong id="imgName">gold</strong><br>
+    <button type="button" onclick="toggleImage()">Toggle Image</button>
+    <script>
+        var originalImage = "../Assests/Images/My-Gold-Guide-600x410.jpg";
+        var alternateImage = "../Assests/Images/Rivaah-Bride.jpg";
+        var originalText = "gold";
+        var alternateText = "lady";
+        var isAlternate = false;
+
+        function toggleImage(){
+            var img = document.getElementById("img1");
+            var imgName = document.getElementById("imgName");
+
+            if (isAlternate) {
+                img.src = originalImage;
+                imgName.innerHTML = originalText;
+                isAlternate = false;
+            } else {
+                img.src = alternateImage;
+                imgName.innerHTML = alternateText;
+                isAlternate = true;
+            }
+        }
+    </script>
+</body>
+</html> -->
+
+
+
+body>
+    
+<img src="../assets/images/roger.jfif" id="img" height="300px" width="300px" alt="roger"><br>
+<strong id="imgname">Roger</strong><br>
+<button type="button" onclick="changeimg()">Change Image</button>
+
+<script>
+let rogerImage = "../assets/images/roger.jfif";
+let rayleighImage = "../assets/images/rayleigh.jfif";
+let currentState = "roger";
+
+function changeimg(){
+    if(currentState == "roger") {
+        document.getElementById("img").src = rayleighImage;
+        document.getElementById("imgname").innerHTML = "Rayleigh";
+        currentState = "rayleigh";
+    } else {
+        document.getElementById("img").src = rogerImage;
+        document.getElementById("imgname").innerHTML = "Roger";
+        currentState = "roger";
+    }
+}
+</script>

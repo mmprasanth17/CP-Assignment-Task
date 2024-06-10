@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <div id="d4"></div>
+    <div id="d5"></div>
+    <div id="d6"></div>
+    <div id="d7"></div>
+    <div id="d8"></div>
+    <script>
+        //how to create object of data class
+        let dateobj = new Date();
+        document.getElementById("d1").innerHTML = dateobj;
+        document.getElementById("d2").innerHTML = dateobj.getFullYear();
+        document.getElementById("d3").innerHTML = dateobj.getHours();
+        document.getElementById("d4").innerHTML = dateobj.getDate();
+        document.getElementById("d5").innerHTML = dateobj.getDay();
+
+        
+
+
+        // let date=
+
+
+        //how to create digital clock;
+        function myclock(){
+            let mytime=new Date();
+            document.getElementById("d6").innerHTML= mytime.toLocaleTimeString();
+        }
+        //myclock
+        setInterval(myclock,1000);
+        
+
+
+
+    </script>
+</body>
+</html>

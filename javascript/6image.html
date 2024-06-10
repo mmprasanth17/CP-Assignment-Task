@@ -1,0 +1,47 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="../Assests/Images/gold-preeti.jpeg" alt="">
+    <button type="button" onclick="click(one)">rajini</button>
+    <button type="button" onclick="click(two)">vijay</button>
+    <button type="button" onclick="click(three)">ajith</button>
+    <button type="button" onclick="click(four)">dhanush</button>
+    <button type="button" onclick="click(five)">karthi</button>
+    <button type="button" onclick="click(six)">surya</button>
+    
+<script>
+    document.getElementById("one").src="../"
+</script>
+
+</body>
+</html> -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <img id="image" src="../Assests/Images/gold-preeti.jpeg" alt="">
+        <button type="button" onclick="changeImage('../Assests/Images/gold-preeti.jpeg')">Rajini</button>
+        <button type="button" onclick="changeImage('../Assests/Images/gold-home.jpg')">Vijay</button>
+        <button type="button" onclick="changeImage('../Assests/Images/ajith.jpg')">Ajith</button>
+        <button type="button" onclick="changeImage('../Assests/Images/dhanush.jpg')">Dhanush</button>
+        <button type="button" onclick="changeImage('../Assests/Images/karthi.jpg')">Karthi</button>
+        <button type="button" onclick="changeImage('../Assests/Images/surya.jpg')">Surya</button>
+        
+        <script>
+            function changeImage(source) {
+                document.getElementById("image").src = source;
+            }
+        </script>
+    </body>
+    </html>
+    

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let courses =["react","python","java","Angular"]
+        console.log(courses)
+        console.log(`array length :${courses.length}`)
+        console.log(`Array Size: ${courses.length - 1}`)
+
+        //how to acess array data outside array
+        console.log(courses[1])
+
+        //how to manipulate array data
+        courses[2] = "advanced java";
+        console.log(courses);
+
+        for(let i=0; i<courses.length;i++){
+            console.log(courses[i])
+        }
+
+        //advanced for of: it will return array values.
+        for(let course of courses){
+            document.write(course,",");
+        }
+        document.write("<br");
+        // for in : it will return array index
+        for(let course in courses){
+            document.write(course,",");
+        }
+        document.write("<br");
+
+        //1.push(): it allows us to us to insert data atlast index of array
+        courses.push("Node js","Express")
+        document.write(courses,"<br>")
+
+        //2.pop(): it is use top remove value from last index of array. it removes single value at a time.
+        courses.pop()
+        document.write(courses,"<br>")
+
+        //3.unshift() : it allows us to insert data at  starting index an array
+        courses.unshift("Html","css");
+        document.write(courses,"<br>");
+
+        //4.shift(): it is used to remove values from starting index of an array, it removes single value at a time
+        courses.shift()
+        document.write(courses,"<br>");
+
+        //5.splices(startIndex, deletecount, deleteTotalInsert) : it allows us to add and remove values from middle index of array
+        courses.splice(3,0, "Saas","Typescript"); // it will add two values from 3rd index
+        document.write(courses,"<br>")
+
+        courses.splice(2,1,"workplace","digital marketing")
+        document.write(courses,"<br>")
+
+        //6. tostring(): it convert array data into string
+        console.log(courses.toString());
+       
+        //7.joint(seperate): it convert array data into string data, it take one parameter tp seperate data
+        console.log(courses.join("*"));
+        console.log(courses.join(" "));
+    </script>
+</body>
+</html>

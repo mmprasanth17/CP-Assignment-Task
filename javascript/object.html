@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        //object data type.
+        let person = {id:101, 
+            name:"prasnth",
+            contact:8534,
+        single:true,
+    address:{
+        city:"chennai",
+        pin:6312,
+        state:"tamil nadu"
+    },
+    details:function(){
+        return `Id:${this.id} Name:${this.name} Contact:${this.contact} Single:${this.single} Address:${this.address.city}` ;
+    }
+}
+        document.write(`Id:${person.id} Name:${person.name} Contact:${person.contact} Single:${person.single} <br>`)
+        document.write(`City:${person.address.city} State:${person.address.state} Pin:${person.address.pin} <br>`)
+        document.write(person.details(),"<br>");
+
+        //how to manipulate object data
+        person.name ="prasanth  m  m"
+        person.contact = 9999
+        document.write(`Id:${person.id} Name:${person.name} Contact:${person.contact} Single:${person.single} <br>`)
+          //
+          let emp=[
+           {id:1,name:"suresh",salery:9500,gender:"male",address:"Chennai"},
+           {id:2,name:"prasanth",salery:8500,gender:"male",address:"Chennai"},
+           {id:3,name:"suresh",salery:9500,gender:"male",address:"Chennai"},
+           {id:4,name:"suresh",salery:9500,gender:"male",address:"Chennai"},
+           {id:5,name:"suresh",salery:9500,gender:"male",address:"Chennai"},
+       ]
+      for (let i=0; i<emp.length; i++)
+       document.write(`Id:${emp[i].id} Name:${emp[i].name} Salery:${emp[i].salery} Gender:${emp[i].gender} Address:${emp[i].address}<br>`)
+       document.write(`Id:${emp[i].id} Name:${emp[i].name} Salery:${emp[i].salery} Gender:${emp[i].gender} Address:${emp[i].address}<br>`)
+    </script>
+</body>
+</html>

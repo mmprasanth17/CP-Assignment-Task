@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="">text address</label><br>
+        <input type="text" name="address1" id="address1">
+        <button type="button" onclick="change()">transfer</button>
+        <label for="">present address</label><br>
+        <input type="text"  name="address2" id="address2">
+       
+    </form>
+        
+       
+    <script>
+
+    function change(){
+       document.getElementById("address2").value = document.getElementById("address1").value;
+        
+
+    }
+
+   
+        </script>
+</body>
+</html>
