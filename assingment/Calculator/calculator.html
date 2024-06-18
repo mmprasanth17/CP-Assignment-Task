@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        position: absolute;
+        border: 1px black solid;
+        margin: auto;
+        margin-top: 200px;
+        width: 600px;
+        margin-left: 400px;
+    }
+    .container2{
+        position: relative;
+        border: 1px black solid;
+        margin: auto;
+        margin-top: 50px;
+        width: 500px;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    .buttons{
+        padding: 20px;
+        text-align: center;
+    }
+</style>
+<body>
+    
+    <div class="container">
+        <div class="container2" id="bmi">
+            <p >Enter you weight(Kg)</p>
+            <input type="number" id="weight">
+            <p >Enter you height(cm)</p>
+            <input type="number" id="height">
+            <br>
+            <p id="bmianswer"></p>
+            <button type="button" onclick="calulatebmi()">Calculate</button>
+        </div>
+        <div class="container2" id="percentage">
+            <p >Enter your marks</p>
+            <input type="text" id="numerator">
+            <p >Enter total marks</p>
+            <input type="text" id="denominator">
+            <br>
+            <p id="percentageanswer"></p>
+            <button type="button" onclick="calulatepercentage()">Calculate</button>
+        </div>
+        <div class="container2" id="temperature">
+            <p>Enter Temperature</p>
+            <input type="number" id="temp"><br><br>
+            <button onclick="ftoc()">F to C</button><br><br>
+            <button onclick="ctof()">C to F</button>
+            <p id="tempans"></p>
+        </div>
+        <div class="container2" id="currencyconverter">
+            <p>Enter in rupees:</p>
+            <input type="text" id="curr" onchange="currencyconverter() ">
+            <p id="inrtousd"></p>       
+            <p id="inrtopound"></p>       
+            <p id="inrtodinar"></p>        
+        </div>
+        <div class="container2" id="agecalc">
+            <p>Enter dob</p>
+            <input type="date" name="" id="dob" onchange="calcage()">
+            <p id="ageis"></p>
+        </div>   
+        <div class="container2" id="calculator">
+            <p>Enter num1</p>
+            <input type="number" id="num1"><br>
+            <p>Enter num2</p>
+            <input type="number" id="num2"><br>
+            <button type="button" onclick="add()">Add</button>
+            <button type="button" onclick="sub()">Sub</button>
+            <button type="button" onclick="mul()">Mul</button>
+            <button type="button" onclick="div()">Div</button>
+            <p id="calcvalue"></p>
+        </div>
+        <div class="buttons" >
+            <button type="button" onclick="showcurr()">Currency Convertor</button>
+            <button type="button" onclick="showtemp()">Temperature</button>
+            <button type="button" onclick="showbmi()">Bmi</button>
+            <button type="button" onclick="showage()">Age Calculator</button>
+            <button type="button" onclick="showcalc()">Calculator</button>
+            <button type="button" onclick="showpercentage()">percentage Calculator</button>
+        </div>     
+    </div>
+    <script>
+        
+    function hideall() {
+        document.getElementById("bmi").style.display = "none";
+        document.getElementById("percentage").style.display = "none";
+        document.getElementById("temperature").style.display = "none";
+        document.getElementById("currencyconverter").style.display = "none";
+        document.getElementById("agecalc").style.display = "none";
+        document.getElementById("calculator").style.display = "none";
+    }
+    function showbmi(){
+            hideall();
+            document.getElementById("bmi").style.display = "block";
+
+    }
+    function showpercentage(){
+            hideall();
+            document.getElementById("percentage").style.display = "block";
+    }
+    function showtemp(){
+        hideall();
+            document.getElementById("temperature").style.display = "block";
+    }
+    function showcurr(){
+            hideall();
+            document.getElementById("currencyconverter").style.display = "block";
+    }
+    function showage(){
+            hideall();
+            document.getElementById("agecalc").style.display = "block";
+    }
+    function showcalc(){
+            hideall();
+            document.getElementById("calculator").style.display = "block";
+    }
+        function calulatebmi(){
+            let weight=parseInt(document.getElementById("weight").value);
+            let height=parseInt(document.getElementById("height").value);
+            height=height/100;
+            console.log(weight);
+            console.log(height);
+            document.getElementById("bmianswer").innerHTML="Your bmi is "+weight/(height*height);
+        }
+        function calulatepercentage(){
+            let numerator=parseInt(document.getElementById("numerator").value);
+            let denominator=parseInt(document.getElementById("denominator").value);
+            document.getElementById("percentageanswer").innerHTML="The percentage is "+numerator*100/denominator;
+        }
+        function ftoc(){
+            let temp=parseInt(document.getElementById("temp").value);
+            temp=(temp-32)*5/9;
+            console.log(temp);
+            document.getElementById("tempans").innerHTML="The termperatur in celcius is"+temp;
+        }
+        function ctof(){
+            hideall();
+            document.getElementById("temperature").style.display = "block";
+            let temp=parseInt(document.getElementById("temp").value);
+            temp=temp*9/5+32;
+            console.log(temp);
+            document.getElementById("tempans").innerHTML="The termperatur in farenheit is"+temp;
+        }
+        function currencyconverter(){
+            let curr =parseInt(document.getElementById("curr").value)*84;
+            document.getElementById("inrtousd").innerHTML="Rupees to Dollar is: "+curr;
+            
+            curr =parseInt(document.getElementById("curr").value)*106;
+            document.getElementById("inrtopound").innerHTML="Rupees to Pound is : "+curr;
+
+            curr =parseInt(document.getElementById("curr").value)*272;
+            document.getElementById("inrtodinar").innerHTML="Rupees to Pound is: "+curr;
+        }
+        function calcage(){
+            let dob=document.getElementById("dob").value;
+            let dobyear=parseInt(dob.slice(0,4));
+            let dobmonth=parseInt(dob.slice(5,7));
+            let dobdate=parseInt(dob.slice(8));
+            // console.log(dob);
+            // console.log(dobyear);
+            // console.log(dobmonth);
+            // console.log(dobdate);
+            // Create a new Date object
+            const currentDate = new Date();
+
+            // Get the current year
+            const curryear =  currentDate.getFullYear();
+
+            // Get the current month (0-indexed, meaning January is 0)
+            const currmonth = currentDate.getMonth() + 1; // Adding 1 because months are 0-indexed
+
+            // Get the current date
+            const currdate = currentDate.getDate();
+            let age=0;
+            if(currmonth>dobmonth){
+                age=curryear-dobyear;
+            }
+            else if(currmonth==dobmonth){
+                if (currdate>dobdate){
+                    age=curryear-dobyear;
+                }
+                else{
+                    age=curryear-dobyear-1;
+                }
+            }
+            else{
+                age=curryear-dobyear-1;
+            }
+            document.getElementById("ageis").innerHTML="You are "+age +" Years old";
+        }
+        function add(){
+            let val1=parseInt(document.getElementById("num1").value);
+            let val2=parseInt(document.getElementById("num2").value);
+            document.getElementById("calcvalue").innerHTML=val1+val2;
+        }
+        function sub(){
+            let val1=parseInt(document.getElementById("num1").value);
+            let val2=parseInt(document.getElementById("num2").value);
+            document.getElementById("calcvalue").innerHTML=val1-val2;
+        }
+        function mul(){
+            let val1=parseInt(document.getElementById("num1").value);
+            let val2=parseInt(document.getElementById("num2").value);
+            document.getElementById("calcvalue").innerHTML=val1*val2;
+        }
+        function div(){
+            let val1=parseInt(document.getElementById("num1").value);
+            let val2=parseInt(document.getElementById("num2").value);
+            document.getElementById("calcvalue").innerHTML=val1/val2;
+        }
+        hideall();
+    </script>
+</body>
+</html>
