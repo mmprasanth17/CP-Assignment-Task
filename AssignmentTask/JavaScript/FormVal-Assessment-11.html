@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./FormValBefore-Assessment-11.js"></script>
+    <title>Document</title>
+
+    <style>
+        .container {
+            background-image: url(../ASSETS/images/images\ \(1\).jfif);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+        }
+
+        .form {
+            border: 6px solid black;
+            font-size: 16px;
+            color: black;
+            background-color: antiquewhite;
+            padding: 20px;
+            display: block;
+            border-radius: 16px;
+            width: 235px
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <form class="form">
+            <label for="">enter user id</label>
+            <input type="text" name="id" id="userid" onblur="checkData()">
+            <span id="uiderror"></span><br>
+            <label for="">enter password</label>
+            <input type="password" name="userpassword" id="passid" onblur="Data()">
+            <span id="upasserror"></span><br>
+            <label for="">enter contact</label>
+            <input type="number" name="usernumber" id="numid" onblur="number()">
+            <span id="unumerror"></span><br>
+            <label for="">enter email</label>
+            <input type="email" name="useremail" id="emailid" onblur="email()">
+            <span id="uemailerror"></span><br>
+            <p>Please select your gender:</p>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label><br><br>
+            <div>
+                <label for="">select qualification</label> <br>
+
+                <input type="checkbox" name="uedu" id="ssc" value="SSC"> SSC
+                <input type="checkbox" name="uedu" id="hsc" value="HSC"> HSC
+                <input type="checkbox" name="uedu" id="ug" value="UG"> UG
+                <input type="checkbox" name="uedu" id="pg" value="PG"> PG
+                <input type="checkbox" name="uedu" id="masters" value="masters"> Masters
+            </div>
+
+            <button type="submit" class="btn">Submit</button>
+        </form>
+
+    </div>
+
+
+
+</body>
+
+</html>

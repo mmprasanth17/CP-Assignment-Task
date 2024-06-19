@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Image</title>
+</head>
+<body>
+    
+<img src="../Assest/images/Cricket.jpg" id="img" height="300px" width="300px" alt="Cricket"><br>
+<strong id="imgname">Cricket</strong><br>
+<button type="button" onclick="changeimg()">Change Image</button>
+
+<script>
+let CricketImage = "../Assest/images/Cricket.jpg";
+let FootballImage = "../Assest/images/Football.png"; 
+let currentState = "Cricket";
+
+function changeimg(){
+    if(currentState == "Cricket") {
+        document.getElementById("img").src = FootballImage;
+        document.getElementById("imgname").innerHTML = "Football";
+        currentState = "Football";
+    } else {
+        document.getElementById("img").src = CricketImage;
+        document.getElementById("imgname").innerHTML = "Cricket";
+        currentState = "Cricket";
+    }
+}
+</script>
+
+</body>
+</html>
