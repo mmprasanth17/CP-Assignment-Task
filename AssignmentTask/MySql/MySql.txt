@@ -1,0 +1,178 @@
+show database - it list downs the database list
+create database cdb - it will create the database with 
+the name "cdb"
+drop database db - it will drop the database with the name "cdb"
+system cls - to clear the screen
+use cdb - it will select the database with name "cdb"
+
+create table tasks (
+id int primary key, 
+title varchar(255),
+start_date Date,
+due_date Date
+);
+show table - it will show the list of table in the selected databse
+
+create table checklist(
+id int, 
+tasks_id int auto_increment,
+title varchar(255),
+is_completed boolean not null Default False,
+primary key(id,tasks_id),
+foreign key(tasks_id)
+references tasks(id)
+on update restrict
+on delete cascade
+);
+
+desc tasks - it will show the structure of the table
+
+create table tasks
+modify id int AUTO_INCREMENT=1;
+
+create table subscribers(
+email varchar(300) not null unique);
+
+alter table subscribers
+add id int auto_increment primary key;
+
+alter table subscribers
+add phone int;
+
+alter table subscribers
+drop column phone;
+
+alter table subscribers
+rename column id to s_id;
+
+Rename table subscribers to sub;
+
+drop table sub;
+
+
+=======================================================
+
+1.Write a SQL statement to create a simple table movies which should include columns movie_id, movie_name, movie_type and 
+  movie_rating only if it does not exist. The combination of movie_id and movie_name should be an unique indentifier of the table.
+
+ans:
+create table movies(
+movie_id int,
+movie_name varchar(150),
+movie_type varchar(150),
+movie_rating varchar(150),
+primary key(movie_id,movie_name)
+);
+
+2.Write a SQL statement to create a table company which should include columns company_id, trade, number_of_employees. 
+  The company_id should be an unique indentifier of the table. trade and number_of_employees columns should not be null.
+  The number_of_employees should be 0 by default.
+
+ans: 
+create table company(
+company_id int primary key,
+trade varchar(150) not null,
+number_of_employees int not null
+);
+
+3.Write a SQL statement to create a table job_offer which should include columns offer_id, offer_title, offer_min_salary and offer_max_salary, 
+  company_id, and make sure that, the default value for job_offer_title is blank, offer_min_salary is 5000 and offer_max_salary is null.
+  The offer_id column should be unique. The foreign key company_id can contain only those values which exist in the company table.
+
+ans:
+create table job_offer(
+offer_id int primary key,
+offer_title varchar(150),
+offer_min_salary int not null Default 5000,
+offer_max_salary int null,
+company_id int,
+foreign key(company_id) References company(company_id)
+);
+
+Alter
+
+4.Write a SQL statement to rename the movies table to movies_renamed.
+ans:
+Rename table movies to movies_renamed;
+
+5.Write a SQL statement to add a column movie_director to the movies_renamed table.
+ans:
+alter table movies_renamed
+add column movie_director varchar(150);
+
+6.Write a SQL statement to add a column ID as a first column of the movies_renamed table.
+ans:
+alter table movies_renamed
+add column id int first;
+
+7.Write a SQL statement to add a column movie_description after the movie_name column in movies_renamed table.
+ans:
+alter table movies_renamed
+add column movie_description varchar(150) after movie_name;
+
+8.Write a SQL statement to change the data type of the column movie_rating to integer.
+ans:
+alter table movies_renamed
+modify movie_rating int;
+
+9.Write a SQL statement to drop the movie_director column.
+alter table movies_renamed
+drop column movie_director;
+
+10.Write a SQL statement to drop the existing primary key from the movies_renamed table.
+ans:
+alter table movies_renamed
+drop primary key;
+
+11.Write a SQL statement to add primary key for the column movie_id in the movies_renamed table.
+ans:
+alter table movies_renamed
+add primary key(movie_id);
+
+12.Write a SQL statement to add a foreign key constraint named fk_candidate_id on company_id column referencing to the primary key company_id from the company table.
+ans:
+alter table job_offer
+add constraint fk_candidate_id foreign key(company_id) references company(company_id);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
