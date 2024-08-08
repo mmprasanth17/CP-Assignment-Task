@@ -1,7 +1,7 @@
 import os
 
 def File_handling_task():
-    file_path = r"demo.txt"
+    file_path = r"C:\Users\prasanth.mm\Pictures\CP-Assignment-Task\AssignmentTask\Python\Assessment(23-07-24)\oops task\07-08-2024\demo.txt"
 
     if os.path.exists(file_path):
         with open(file_path, "r") as file:
