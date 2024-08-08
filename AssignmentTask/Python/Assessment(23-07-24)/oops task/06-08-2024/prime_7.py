@@ -46,18 +46,21 @@ class Number:
             if int(self.value)%i==0:
                 factors.append(i)
         return factors
+def main():
+    num = Number()
+    if (num.ChkPrime()):
+        print(f'{num.value} is a Prime Number')
+    else:
+        print(f'{num.value} is not a Prime Number')
 
-num = Number()
-if (num.ChkPrime()):
-    print(f'{num.value} is a Prime Number')
-else:
-    print(f'{num.value} is not a Prime Number')
+    if (num.ChkPerfect()):
+        print(f'{num.value} is a Perfect Number')
+    else:
+        print(f'{num.value} is not a Perfect Number')
 
-if (num.ChkPerfect()):
-    print(f'{num.value} is a Perfect Number')
-else:
-    print(f'{num.value} is not a Perfect Number')
+    print(num.Factors())
 
-print(num.Factors())
-
-print(num.SumFactors())
+    print(num.SumFactors())
+    
+if __name__=="__main__":
+    main()
