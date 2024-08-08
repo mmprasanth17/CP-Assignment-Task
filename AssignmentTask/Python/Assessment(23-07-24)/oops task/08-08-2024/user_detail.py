@@ -16,7 +16,7 @@ class User:
         print(f'user profile \n Name : {self.first_name} {self.last_name}\n Email : {self.email}\n Phone No:{self.phone_no}')
     
     def greet_user():
-        print(f'Hey guys Above details are my user profile')
+        print(f'Hey guys below details are my user profile')
 def main():      
     profile1=User("Prasanth","Mani","prasanth@gmail.com","942316345")
     profile2=User("Mani","Kanniyappan","mani@gmail.com","842316345")
